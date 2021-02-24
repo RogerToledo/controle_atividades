@@ -1,0 +1,129 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wc_box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 31;
+    display: none;
+}
+
+.wc_user_edit,
+.wc_user_create{
+    display: none;
+}
+
+.wc_box_modal{
+    margin: auto;
+    width: 700px;
+    position: relative;
+}
+
+.wc_box_modal_title{
+    padding: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: #0A537D;
+}
+
+.wc_box_modal_content{
+    padding: 30px;
+    background: #fff;
+}
+
+.wc_box_modal_close{
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    cursor: pointer;
+}
+
+.wc_box_modal_close:hover{
+    color: #F45563;
+}
+
+.wc_box_modal_content form input,
+.wc_box_modal_content form select{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 0.875rem;
+}
+
+.wc_actions img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+.wc_content{
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.wc_content h1{
+    text-align: center;
+    font-size: 1.6em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.wc_single_user_title .row{
+    display: block;
+    background: #1471c2;
+    font-size: 0.875em;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16.6666667%;
+    padding: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+}
+
+.wc_single_user{
+    display: block;
+    background: #fbfbfb;
+    font-size: 0.875em;
+}
+
+.wc_single_user:nth-of-type(2n+0){
+    background: #fff;
+}
+
+.wc_single_user .row{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16.6666667%;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+.wc_single_user .title{
+    font-weight: bold;
+}
+
+.wc_single_user .btn{
+    font-size: 0.7em;
+    margin-left: 10px !Important;
+}
+
+.wc_single_user_add{
+    background: #d4ddd4;
+}
+
+.wc_single_user_add:nth-last-of-type(2n+0){
+    background: #e8eee8;
+}

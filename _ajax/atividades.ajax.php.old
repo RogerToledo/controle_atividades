@@ -1,0 +1,69 @@
+<?php
+
+    require '../_app/Config.inc.php';
+
+    $jSON = array();
+    
+    $getPost = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    
+    if(empty($getPost['callback_action'])):
+        $jSON['trigger'] = AjaxErro("<span class='icon-cross al_center ds_block'>TESTE -> Nenhuma ação não foi selecionada no formulário!</span>", E_USER_ERROR);
+        
+    else:
+        $post = array_map("strip_tags", $getPost);
+        $action = $post['callback_action'];
+        
+        unset($post['callback'], $post['callback_action']);
+        
+        $create = new Create;
+    
+        switch ($action):
+            case 'Users_create':
+                $jSON['user']  = $post;
+                
+                if(in_array('', $post)):
+                    $jSON['trigger'] = AjaxErro("<span class='icon-warning al_center ds_block'>Para cadastrar um novo usuário todos os campos devem ser preenchidos!</span>", E_USER_WARNING);
+                    break;
+                endif;
+                
+                $userCreate = [
+                    'user_name' => $post['user_name'],
+                    'user_lastname' => $post['user_lastname'],
+                    'user_email' => $post['user_email'],
+                    'user_genre' => $post['user_genre'],
+                    'user_datebirth' => Check::Name($post['user_datebirth']),
+                    'user_registration' => date(DATE_W3C)
+                ];
+                
+                $create->ExeCreate('users', $userCreate);
+                
+                $userId = $create->getResult();
+                
+                $jSON['content_add'] = "<div class='wc_single_user wc_single_user_add' id='{$userId}'>"
+                    . "<p class='row title'>{$post['user_name']} {$post['user_lastname']}</p>"
+                    . "<p class='row'>{$post['user_email']}</p>"
+                    . "<p class='row'>{$post['user_datebirth']}</p>"
+                    . "<p class='row'>{$post['addr_street']}, {$post['addr_number']}</p>"
+                    . "<p class='row'>{$post['addr_city']}/{$post['addr_state']}</p>"
+                    . "<p class='row al_right'>"
+                    . "<span class='btn btn_blue icon-pencil2 icon-notext wc_edit wc_tooltip'><span class='wc_tooltip_balloon'>Editar Dados de {$post['user_name']}!</span></span>"
+                    . "<span class='btn btn_red icon-cross icon-notext wc_delete wc_tooltip' id='{$userId}'><span class='wc_tooltip_balloon'>Deletar conta de {$post['user_name']}!</span></span>"
+                    . "</p>"
+                    . "</div>";
+                
+                //$jSON['clear'] = true; 
+                
+                break;
+            
+            default :
+                $jSON['trigger'] = AjaxErro("<span class='icon-cross al_center ds_block'>Nenhuma ação não foi selecionada no formulário!</span>", E_USER_ERROR);
+
+                break;
+        endswitch;
+        
+    
+    endif;
+    
+    echo json_encode($jSON);
+
+?>
