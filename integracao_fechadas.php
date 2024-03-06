@@ -408,7 +408,7 @@
                                             $read->FullRead($query);
 
                                             if(!$read->getResult()):
-                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Dívida Ativa:</strong> | Não existe empresa cadastrada.</div>';
+                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe empresa cadastrada.</div>';
                                             else:
 
                                                 foreach($read->getResult() as $usr):
@@ -555,7 +555,7 @@
                                             $read->FullRead($query);
 
                                             if(!$read->getResult()):
-                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Dívida Ativa:</strong> | Não existe empresa cadastrada.</div>';
+                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe empresa cadastrada.</div>';
                                             else:
 
                                                 foreach($read->getResult() as $cli):
@@ -640,7 +640,7 @@
                                             $read->FullRead($query);
 
                                             if(!$read->getResult()):
-                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Dívida Ativa:</strong> | Não existe empresa cadastrada.</div>';
+                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe empresa cadastrada.</div>';
                                             else:
 
                                                 foreach($read->getResult() as $da):
@@ -748,7 +748,7 @@
                                             $read->FullRead($query);
 
                                             if(!$read->getResult()):
-                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Dívida Ativa:</strong> | Não existe empresa cadastrada.</div>';
+                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe empresa cadastrada.</div>';
                                             else:
 
                                                 foreach($read->getResult() as $ati):
@@ -804,7 +804,7 @@
                             </form>
                             <div class="modal-footer"></div>
                             <div class="container-fluid">
-                                <h4>Lista de Empresas DA</h4>
+                                <h4>Lista Tipo de Atendimento</h4>
                                 <div class="table-responsive" style="overflow: auto; height: 350px;">  
                                     <table class="table table-striped table-bordered">
                                         <thead>
@@ -819,7 +819,7 @@
                                             $read->FullRead($query);
 
                                             if(!$read->getResult()):
-                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Dívida Ativa:</strong> | Não existe empresa cadastrada.</div>';
+                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe empresa cadastrada.</div>';
                                             else:
 
                                                 foreach($read->getResult() as $ate):

@@ -366,7 +366,7 @@
                                             $read->FullRead($query);
 
                                             if(!$read->getResult()):
-                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Dívida Ativa:</strong> | Não existe empresa cadastrada.</div>';
+                                                echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe empresa cadastrada.</div>';
                                             else:
 
                                                 foreach($read->getResult() as $usr):
