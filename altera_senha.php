@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="#">
 
-        <title>Softplan | Login</title>
+        <title>Login</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
@@ -25,7 +25,7 @@
         ?>
         <div class="container">
             <div class="panel panel-primary">
-                <div class="panel-heading"><h4>Softplan | Nova Senha</h4></div>
+                <div class="panel-heading"><h4>Nova Senha</h4></div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="" name="login_form">
                         <div class="form-group">

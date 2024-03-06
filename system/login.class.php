@@ -14,7 +14,7 @@
         private $Error;
         private $Result;
     
-        function loginSoft($Data) {
+        function login($Data) {
             
             $this->Data = $Data;
             
@@ -107,7 +107,7 @@
     
         }
         
-        function logoutSoft(){
+        function logout(){
             $_SESSION['login'] = false;
             $_SESSION['usr_id'] = '';
             $_SESSION['usr_nome'] = '';

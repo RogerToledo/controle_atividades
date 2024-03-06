@@ -14,23 +14,11 @@ define('SLA_SUP', '08:00:00');
  * BANCO DE DADOS
  */
  
-//CONFIGURAÇÃO DO SITE ####################
-//define('SIS_DB_HOST','mysql.hostinger.com.br');
-//define('SIS_DB_USER','u902376232_dev');
-//define('SIS_DB_PASS','9IQrlXfDKvbB');
-//define('SIS_DB_DBSA','u902376232_dev');
-
-//CONFIGURAÇÃO DO SITE ####################
-define('SIS_DB_HOST','mysql.hostinger.com.br');
-define('SIS_DB_USER','u902376232_motor');
-define('SIS_DB_PASS','MR0t3yWEJe4j');
-define('SIS_DB_DBSA','u902376232_motor');
-
-//CONFIGURAÇÃO LOCALHOST ####################
-//define('SIS_DB_HOST', 'localhost:3307'); //Link do banco de dados
-//define('SIS_DB_USER', 'root'); //Usuário do banco de dados
-//define('SIS_DB_PASS', ''); //Senha  do banco de dados
-//define('SIS_DB_DBSA', 'soft'); //Nome  do banco de dados
+//CONFIGURAÇÃO LOCALHOST
+define('SIS_DB_HOST', 'localhost:3306'); //Link do banco de dados
+define('SIS_DB_USER', 'root'); //Usuário do banco de dados
+define('SIS_DB_PASS', ''); //Senha  do banco de dados
+define('SIS_DB_DBSA', 'atividades'); //Nome  do banco de dados
 
 
 /*
@@ -42,7 +30,7 @@ function MyAutoLoad($Class) {
 
     foreach ($cDir as $dirName):
         if (!$iDir && file_exists(__DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php') && !is_dir(__DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php')):
-            include_once (__DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php');
+            include_once __DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php';
             $iDir = true;
         endif;
     endforeach;
