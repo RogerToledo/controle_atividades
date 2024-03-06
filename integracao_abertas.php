@@ -246,7 +246,7 @@
                         $readAberto->FullRead($queryAberto);
                         
                         if(!$readAberto->getResult()):
-                            echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>#acelerapgm</strong> | Não existe atividades em aberto.</div>';
+                            echo '<div class="alert alert-info alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Não existe atividades em aberto.</div>';
                         else:
 
                             foreach($readAberto->getResult() as $ativAberto):
